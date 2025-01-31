@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anandhaprakash | Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #121212;
+            color: #fff;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: #222;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 { margin: 0; font-size: 24px; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { display: inline; margin: 0 15px; }
+        nav ul li a { color: #fff; text-decoration: none; font-size: 16px; }
+
+        /* Sections */
+        section { padding: 80px 20px; }
+        #about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .skills-list span {
+            display: inline-block;
+            background: #444;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        
+        /* Projects */
+        .project-card {
+            background: #333;
+            padding: 20px;
+            margin: 10px auto;
+            width: 60%;
+            border-radius: 10px;
+        }
+        .project-card img { width: 100%; border-radius: 5px; }
+
+        /* Footer */
+        footer { background: #222; padding: 20px 0; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Anandhaprakash RamaKrishnan</h1>
+            <p>AWS Cloud Engineer | DevOps Enthusiast | Salesforce Developer</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            <h2>About Me</h2>
+            <p>I am an AWS Cloud Engineer and Salesforce Developer, skilled in Python, Jenkins, Docker, and DevOps.</p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <span>AWS</span>
+                <span>Python</span>
+                <span>Docker</span>
+                <span>Jenkins</span>
+                <span>Salesforce (Apex, LWC)</span>
+                <span>CI/CD</span>
+                <span>MySQL</span>
+                <span>Git</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400" alt="Project 1">
+                <h3>Motorcycle Helmet Detection</h3>
+                <p>Developed a YOLOv3-based system to detect helmet violations and triple riding.</p>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400" alt="Project 2">
+                <h3>Fire Safety Alarm System</h3>
+                <p>Designed a fire detection system using Infrared sensors and Arduino.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:anandhaprakash13@gmail.com">anandhaprakash13@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/anandha-prakash-r/" target="_blank">View Profile</a></p>
+            <p>GitHub: <a href="https://github.com/Mikey-tom" target="_blank">View Projects</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Anandhaprakash RamaKrishnan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("nav ul li a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    window.scrollTo({ top: target.offsetTop - 70, behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
